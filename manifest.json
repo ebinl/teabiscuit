@@ -1,0 +1,26 @@
+{
+  "name": "Tea Biscuit Media (TEABISCUITMEDIA)",
+  "short_name": "teabiscu!t",
+  "description": "Built on Experiences. Driven by Creativity. Powered by Technology. Premier Digital Marketing, Website Development, SEO & Ad Shooting Agency in Bengaluru.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0B0907",
+  "theme_color": "#D4AF37",
+  "orientation": "portrait-primary",
+  "categories": ["business", "marketing", "design", "technology"],
+  "icons": [
+    {
+      "src": "/assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/logo-hd.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,18 +1,27 @@
 {
   "name": "teabiscuitmedia",
   "version": "1.0.0",
-  "description": "TEABISCUITMEDIA — Performance Digital Marketing, ROAS & Growth Agency Website",
+  "description": "Tea Biscuit Media (TEABISCUITMEDIA) — Digital Marketing, Website Development, SEO & Ad Shooting Agency in Bengaluru",
   "private": true,
+  "homepage": "https://teabiscuitmedia.vercel.app",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "start": "python3 -m http.server 3000",
     "dev": "python3 -m http.server 3000",
-    "build": "echo 'Static build ready for Vercel deployment'"
+    "build": "echo 'Tea Biscuit Media static build verified and ready for Vercel hosting'"
   },
   "keywords": [
-    "teabiscuit",
-    "branding",
-    "creative-agency",
-    "digital-studio"
+    "teabiscuitmedia",
+    "tea-biscuit-media",
+    "digital-marketing-bengaluru",
+    "website-development",
+    "seo-agency-bangalore",
+    "meta-and-google-ads",
+    "lead-development",
+    "commercial-ad-shooting"
   ],
+  "author": "Tejas Vijay & Ebin Shaji",
   "license": "MIT"
 }

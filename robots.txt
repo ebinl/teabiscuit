@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemaps for Google Search Console & Sitelinks Discovery
+Sitemap: https://teabiscuitmedia.vercel.app/sitemap.xml
