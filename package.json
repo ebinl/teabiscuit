@@ -1,0 +1,18 @@
+{
+  "name": "teabiscuitmedia",
+  "version": "1.0.0",
+  "description": "TEABISCUITMEDIA — Performance Digital Marketing, ROAS & Growth Agency Website",
+  "private": true,
+  "scripts": {
+    "start": "python3 -m http.server 3000",
+    "dev": "python3 -m http.server 3000",
+    "build": "echo 'Static build ready for Vercel deployment'"
+  },
+  "keywords": [
+    "teabiscuit",
+    "branding",
+    "creative-agency",
+    "digital-studio"
+  ],
+  "license": "MIT"
+}

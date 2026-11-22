@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#241E1D"/>
+  <!-- Bold yellow exclamation mark from teabiscu!t logo -->
+  <path d="M26 12H38L36.5 39H27.5L26 12Z" rx="3" fill="#FAFF00"/>
+  <circle cx="32" cy="49" r="6" fill="#FAFF00"/>
+</svg>
