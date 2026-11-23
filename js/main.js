@@ -372,3 +372,164 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+// 16. Our Creative Collective 4-Column Team Swiper Carousel (9 Total Columns)
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.Swiper && document.querySelector(".collective-swiper")) {
+    new Swiper(".collective-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 22,
+      loop: true,
+      autoplay: {
+        delay: 3800,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".collective-next",
+        prevEl: ".collective-prev",
+      },
+      breakpoints: {
+        320: { slidesPerView: 1.15, spaceBetween: 16 },
+        640: { slidesPerView: 2, spaceBetween: 18 },
+        992: { slidesPerView: 3, spaceBetween: 20 },
+        1200: { slidesPerView: 4, spaceBetween: 22 },
+      },
+    });
+  }
+});
+
+
+// 17. Pop-Up Page View Navigation (Opens Target Section With Bouncy Popping Animation Instead of Scrolling Down)
+document.addEventListener("DOMContentLoaded", function () {
+  const overlay = document.getElementById("sectionPopOverlay");
+  const contentBox = document.getElementById("sectionPopContent");
+  const titleEl = document.getElementById("sectionPopTitle");
+  const closeBtn = document.getElementById("closeSectionPop");
+  const offcanvas = document.getElementById("offcanvasArea");
+
+  if (!overlay || !contentBox) return;
+
+  const sectionLabels = {
+    "#enquiry-panel": "Services & Instant WhatsApp Quote",
+    "#services-section": "Digital Marketing Channels",
+    "#portfolio": "ROAS & Campaign Case Studies",
+    "#about": "6-Pillar Growth Framework",
+    "#founder": "Leadership — Founder & Technical Head",
+    "#creative-team": "Our Creative Collective",
+    "#faq": "Frequently Asked Questions",
+    "#contact": "Start Your Growth Engine",
+  };
+
+  let activeSection = null;
+  let placeholderNode = null;
+
+  function restoreActiveSection() {
+    if (activeSection && placeholderNode && placeholderNode.parentNode) {
+      placeholderNode.parentNode.insertBefore(activeSection, placeholderNode);
+      placeholderNode.parentNode.removeChild(placeholderNode);
+    }
+    activeSection = null;
+    placeholderNode = null;
+  }
+
+  function closeSectionPop() {
+    overlay.classList.remove("is-open");
+    overlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    restoreActiveSection();
+  }
+
+  function openSectionPop(hash, triggerLink) {
+    const target = document.querySelector(hash);
+    if (!target || target.tagName !== "SECTION") return false;
+
+    // Close offcanvas menu if open
+    if (offcanvas) offcanvas.classList.remove("is-open");
+
+    // Restore any previously popped section before popping the new one
+    restoreActiveSection();
+
+    // Re-trigger popping spring animation cleanly
+    overlay.classList.remove("is-open");
+    void overlay.offsetWidth;
+
+    placeholderNode = document.createComment("section-pop-anchor:" + hash);
+    target.parentNode.insertBefore(placeholderNode, target);
+    contentBox.innerHTML = "";
+    contentBox.appendChild(target);
+    contentBox.scrollTop = 0;
+    activeSection = target;
+
+    const labelText =
+      sectionLabels[hash] ||
+      (triggerLink ? triggerLink.textContent.trim().replace(/\s+/g, " ") : "Explore");
+    if (titleEl) titleEl.textContent = labelText;
+
+    overlay.classList.add("is-open");
+    overlay.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+
+    // Update active state on desktop navbar pills
+    document.querySelectorAll(".main-menu > ul > li > a").forEach((a) => {
+      a.classList.toggle("active", a.getAttribute("href") === hash);
+    });
+
+    // Notify Swipers or responsive layouts inside the popped section
+    setTimeout(() => {
+      window.dispatchEvent(new Event("resize"));
+    }, 80);
+
+    return true;
+  }
+
+  // Intercept all internal section anchor clicks (Navbar, Offcanvas Drawer, Hero & Footer buttons)
+  document.addEventListener("click", function (e) {
+    const link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+
+    const hash = link.getAttribute("href");
+    if (!hash || hash === "#") return;
+
+    // Home (#top): close pop-up and trigger crisp hero pop animation without scrolling down
+    if (hash === "#top") {
+      e.preventDefault();
+      if (offcanvas) offcanvas.classList.remove("is-open");
+      closeSectionPop();
+      window.scrollTo(0, 0);
+      document.querySelectorAll(".main-menu > ul > li > a").forEach((a) => {
+        a.classList.toggle("active", a.getAttribute("href") === "#top");
+      });
+      const hero = document.querySelector(".intro-area");
+      if (hero) {
+        hero.classList.remove("hero-pop-pulse");
+        void hero.offsetWidth;
+        hero.classList.add("hero-pop-pulse");
+      }
+      return;
+    }
+
+    // Ignore non-section placeholder anchors (e.g. #instagram, #linkedin, #github)
+    const targetEl = document.querySelector(hash);
+    if (!targetEl || targetEl.tagName !== "SECTION") return;
+
+    e.preventDefault();
+    openSectionPop(hash, link);
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeSectionPop);
+  }
+
+  overlay.addEventListener("click", function (e) {
+    if (e.target === overlay) {
+      closeSectionPop();
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && overlay.classList.contains("is-open")) {
+      closeSectionPop();
+    }
+  });
+});
