@@ -5663,3 +5663,409 @@ body.thinkb-light-theme .video_testimonial_overlay .reel-caption span {
   color: #FFFFFF !important;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
+
+
+/* ==========================================================================
+   27. BESPOKE SWISS-EDITORIAL STUDIO ARCHITECTURE (NON-TEMPLATE DESIGN)
+   ========================================================================== */
+/* Clean Architectural Header — Zero Nested Pill Clutter */
+body.thinkb-light-theme .header-area {
+  top: 0 !important;
+  padding: 0 !important;
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  border-bottom: 1px solid #EAEAEA !important;
+}
+
+body.thinkb-light-theme .header-area .container-large {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 28px !important;
+}
+
+body.thinkb-light-theme .header-area__inner {
+  height: 80px !important;
+}
+
+body.thinkb-light-theme .nav-pill-capsule {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+body.thinkb-light-theme .main-menu > ul {
+  gap: 28px !important;
+}
+
+body.thinkb-light-theme .main-menu > ul > li > a {
+  padding: 6px 2px !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 15px !important;
+  color: #3A3A3A !important;
+  position: relative;
+}
+
+body.thinkb-light-theme .main-menu > ul > li > a:hover,
+body.thinkb-light-theme .main-menu > ul > li > a.active {
+  color: #FF6B00 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.thinkb-light-theme .main-menu > ul > li > a.active::after,
+body.thinkb-light-theme .main-menu > ul > li > a:hover::after {
+  display: block !important;
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #FF6B00;
+}
+
+/* Bespoke Asymmetric Editorial Hero */
+.editorial-hero {
+  padding: 76px 0 64px !important;
+}
+
+.editorial-hero-top {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 56px;
+  align-items: end;
+  margin-bottom: 56px;
+}
+
+.editorial-kicker {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FF6B00 !important;
+  margin-bottom: 18px;
+}
+
+.editorial-display-title {
+  font-size: clamp(2.85rem, 5.8vw, 5.15rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.025em !important;
+  color: #121212 !important;
+  margin: 0;
+}
+
+.editorial-lead {
+  font-size: 17.5px !important;
+  line-height: 1.78 !important;
+  color: #4D4D4D !important;
+  margin-bottom: 26px;
+}
+
+.editorial-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.editorial-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: #FF6B00;
+  color: #FFFFFF !important;
+  font-size: 15.5px;
+  transition: var(--transition);
+}
+
+.editorial-btn-primary i {
+  color: #FFFFFF !important;
+  font-size: 13px;
+  transition: transform 0.3s ease;
+}
+
+.editorial-btn-primary:hover {
+  background: #E05A00;
+  transform: translateY(-2px);
+}
+
+.editorial-btn-primary:hover i {
+  transform: translateX(4px);
+}
+
+.editorial-link-underline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15.5px;
+  color: #141414 !important;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #141414;
+}
+
+.editorial-link-underline:hover {
+  color: #FF6B00 !important;
+  border-color: #FF6B00;
+}
+
+/* Full-Width Architectural Tea & Biscuit Visual Stage */
+.editorial-hero-stage {
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid #EAEAEA;
+  background: #FAF8F5;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.06);
+}
+
+.editorial-stage-media {
+  width: 100%;
+  aspect-ratio: 16 / 8.2;
+  overflow: hidden;
+}
+
+.editorial-stage-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-hero-stage:hover .editorial-stage-media img {
+  transform: scale(1.025);
+}
+
+.editorial-stage-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #FFFFFF;
+  border-top: 1px solid #EAEAEA;
+}
+
+.stage-strip-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 20px 24px;
+  border-right: 1px solid #EFEFEF;
+  transition: background 0.25s ease;
+}
+
+.stage-strip-item:last-child {
+  border-right: none;
+}
+
+.stage-strip-item:hover {
+  background: #FFF7F1;
+}
+
+.strip-num {
+  font-size: 13px;
+  color: #FF6B00 !important;
+}
+
+.strip-label {
+  font-size: 15px;
+  color: #1A1A1A !important;
+}
+
+/* Editorial Hairline Marquee */
+.studio-marquee-strip {
+  overflow: hidden;
+  border-top: 1px solid #EAEAEA;
+  border-bottom: 1px solid #EAEAEA;
+  padding: 18px 0;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.studio-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: max-content;
+  animation: studioMarqueeScroll 34s linear infinite;
+}
+
+.studio-marquee-track span {
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #333333 !important;
+  white-space: nowrap;
+}
+
+.studio-marquee-track i {
+  color: #FF6B00;
+  font-size: 14px;
+}
+
+@keyframes studioMarqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Bespoke Staggered 2-Column Editorial Work Gallery */
+.editorial-work-area {
+  padding: 108px 0 120px;
+  background: transparent;
+}
+
+.editorial-section-head {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: end;
+  padding-bottom: 36px;
+  margin-bottom: 56px;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.editorial-section-title {
+  font-size: clamp(2.1rem, 3.8vw, 3.3rem) !important;
+  line-height: 1.15 !important;
+  color: #121212 !important;
+  margin: 0;
+}
+
+.editorial-section-note {
+  font-size: 16.5px !important;
+  color: #555555 !important;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.editorial-work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px 48px;
+}
+
+.editorial-work-item--offset {
+  margin-top: 72px;
+}
+
+.editorial-work-media {
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 1px solid #EBEBEB;
+  background: #F6F6F7;
+  margin-bottom: 22px;
+}
+
+.editorial-work-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-work-item:hover .editorial-work-media img {
+  transform: scale(1.045);
+}
+
+.editorial-work-meta {
+  padding-top: 4px;
+}
+
+.work-idx {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FF6B00 !important;
+  margin-bottom: 8px;
+}
+
+.editorial-work-meta h4 {
+  font-size: 26px !important;
+  color: #141414 !important;
+  margin-bottom: 8px;
+}
+
+.editorial-work-meta p {
+  font-size: 16px !important;
+  color: #5C5C5C !important;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Architectural Swiss-Grid Restyle for Service Enquiry & FAQ (Zero Heavy Boxes) */
+body.thinkb-light-theme .enquiry-tabs-nav {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  gap: 0 !important;
+}
+
+body.thinkb-light-theme .enquiry-tab-btn {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid #E5E5E5 !important;
+  border-radius: 0 !important;
+  padding: 18px 14px !important;
+}
+
+body.thinkb-light-theme .enquiry-tab-btn:first-child {
+  border-top: 1px solid #E5E5E5 !important;
+}
+
+body.thinkb-light-theme .enquiry-tab-btn.active,
+body.thinkb-light-theme .enquiry-tab-btn:hover {
+  background: rgba(255, 107, 0, 0.05) !important;
+  border-bottom-color: #FF6B00 !important;
+}
+
+body.thinkb-light-theme .enquiry-detail-card {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid #EAEAEA !important;
+  border-radius: 22px !important;
+  box-shadow: none !important;
+}
+
+body.thinkb-light-theme .tb-faq-item {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid #E5E5E5 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+body.thinkb-light-theme .tb-faq-item:first-child {
+  border-top: 1px solid #E5E5E5 !important;
+}
+
+@media (max-width: 991px) {
+  .editorial-hero-top,
+  .editorial-section-head,
+  .editorial-work-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .editorial-work-item--offset {
+    margin-top: 0;
+  }
+  .editorial-stage-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+  .stage-strip-item {
+    border-bottom: 1px solid #EFEFEF;
+  }
+}
+
+@media (max-width: 576px) {
+  .editorial-stage-strip {
+    grid-template-columns: 1fr;
+  }
+  .editorial-stage-media {
+    aspect-ratio: 4 / 3;
+  }
+}
